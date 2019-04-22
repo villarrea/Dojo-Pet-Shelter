@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div class="adding">
+
+    <button [routerLink]="['/']" >Home</button>
+    <button [routerLink]= "['/edit/' + detailsPet._id]" >Edit</button>
+    <br>
+    <br>
+    <div class="addForm">
+      <h1> Pet Name: {{detailsPet.name}}</h1>
+      <h3> Pet Type: {{detailsPet.type}}</h3>
+      <h3> Description: {{detailsPet.description}}</h3>
+      <h4> Skills</h4>
+      <h5> {{detailsPet.skillOne}}</h5>
+      <h5> {{detailsPet.skillTwo}}</h5>
+      <h5> {{detailsPet.skillThree}}</h5>
+      <h6> Likes: {{detailsPet.likes}} </h6>
+    </div>
+    <br>
+    <button (click)="onDelete(detailsPet._id)"  >Adopt</button>
+    <button *ngIf="click_like" (click)="onLike(detailsPet._id)" >Like</button>
+
+
+    
+</div>

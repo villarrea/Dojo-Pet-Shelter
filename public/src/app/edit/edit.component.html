@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div class="adding">
+
+    <button [routerLink]="['/']" >Home</button>
+
+    <button [routerLink]="['/details/' + editPet._id]" > Show Details </button>
+    <br>
+    <div *ngIf='errors.length > 0' style='color:red;'>
+        <h6 *ngFor='let error of errors'>{{error}}</h6>
+    </div>
+    <br>
+    <div class="addForm">
+    <form (submit) = "onEditPet()">
+      <p>Name: <input placeholder="Name" [(ngModel)] = "editPet.name" type = "text" name="editPet.name" ></p>
+      <p>Type of Pet: <input placeholder="Type" [(ngModel)] = "editPet.type" type = "text" name="editPet.type" ></p>
+      <p>Description: <input placeholder="Description" [(ngModel)] = "editPet.description" type = "text" name="editPet.description" ></p>
+      <p>Skill (optional): <input [(ngModel)] = "editPet.skillOne" type = "text" name="editPet.skillOne" ></p>
+      <p>Additional Skill (optional): <input [(ngModel)] = "editPet.skillTwo" type = "text" name="editPet.skillTwo" ></p>
+      <p>Additional Skill (optional): <input [(ngModel)] = "editPet.skillThree" type = "text" name="editPet.skillThree" ></p>
+      <input class="add_submit" type="submit" value="Edit Pet">
+    </form>
+    </div>
+
+</div>

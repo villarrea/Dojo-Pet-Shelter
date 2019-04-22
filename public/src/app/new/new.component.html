@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div class="adding">
+
+    <button [routerLink]="['/']" >Home</button>
+    <br>
+    <div *ngIf='errors.length > 0' style='color:red;'>
+        <h6 *ngFor='let error of errors'>{{error}}</h6>
+    </div>
+    <br>
+    <div class="addForm">
+    <form (submit) = "onAddPet()">
+      <p>Name: <input placeholder="Name" [(ngModel)] = "newPet.name" type = "text" name="name" ></p>
+      <p>Type of Pet: <input placeholder="Type" [(ngModel)] = "newPet.type" type = "text" name="type" ></p>
+      <p>Description: <input placeholder="Description" [(ngModel)] = "newPet.description" type = "text" name="description" ></p>
+      <p>Skill (optional): <input [(ngModel)] = "newPet.skillOne" type = "text" name="skillOne" ></p>
+      <p>Additional Skill (optional): <input [(ngModel)] = "newPet.skillTwo" type = "text" name="skillTwo" ></p>
+      <p>Additional Skill (optional): <input [(ngModel)] = "newPet.skillThree" type = "text" name="skillThree" ></p>
+      <input class="add_submit" type="submit" value="Add Pet">
+    </form>
+    </div>
+</div>

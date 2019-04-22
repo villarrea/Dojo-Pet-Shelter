@@ -1,0 +1,19 @@
+.pets{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+.pet{
+    text-align: left;
+    margin: auto;
+    width: 600px;
+}
+body{
+    margin: auto;
+}
+
+h4{
+    text-decoration: underline;
+}

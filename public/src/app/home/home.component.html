@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div class="pets">
+    <br>
+
+    <div class="adding">
+    <button [routerLink]="['/new']" >Add A Pet To The Shelter</button>
+    </div>
+
+    <br>
+   
+    <div class="pet"> 
+      <table class="table table-striped">
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Likes</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor = "let pet of pets" >
+            <td>{{pet.name}}</td>
+            <td>{{pet.type}}</td>
+            <td>{{pet.likes}}</td>
+            <td><a [routerLink]="['/details/' + pet._id]">INFO</a> | <a [routerLink]="['/edit/' + pet._id]" >EDIT</a></td>
+          </tr>
+      </table>
+        
+    </div>
+</div>
+

@@ -1,0 +1,22 @@
+.adding{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+.addForm{
+    text-align: left;
+    border-style: solid;
+    border-color: chocolate;
+    padding: 10px;
+}
+body{
+    margin: auto;
+}
+.add_submit{
+    margin: 0 0 0 200px;
+}
+h4{
+    text-decoration:underline;    
+}

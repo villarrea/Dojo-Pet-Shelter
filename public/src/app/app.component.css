@@ -1,0 +1,17 @@
+body{
+    padding: 10px;
+    background-image: linear-gradient(to right, antiquewhite, white, antiquewhite);
+    width: auto;
+    height: auto;
+    margin: auto;
+
+}
+.root_title{
+    text-align: center;
+    text-decoration: underline;
+    color: chocolate;
+}
+h1{
+    color: chocolate;
+    font-family: sans-serif;
+}
